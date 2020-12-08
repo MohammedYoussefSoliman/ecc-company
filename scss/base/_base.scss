@@ -1,0 +1,93 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  white-space: normal;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(202, 202, 202);
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.owl-wrapper-outer {
+  height: 100% !important;    
+}
+
+.owl-wrapper {
+   height: 100%;   
+}
+
+.owl-item {
+  height: 100%;
+}
+
+.b-Amarelo {
+  height: 100%;
+}
+
+.owl-item h1 {
+  margin: 0;
+}

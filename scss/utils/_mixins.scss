@@ -1,0 +1,207 @@
+@import "./variables";
+
+@mixin center-content-x {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin center-content-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin paper_shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@mixin btn($color) {
+  background: $color;
+  color: $white;
+  padding: 14px 20px;
+  position: relative;
+  @include center-content-x;
+  white-space: nowrap;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+@mixin gap($value, $dir: row) {
+  @if ($dir != row) {
+    > * {
+      margin: 0;
+      margin-bottom: $value;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  } @else {
+    > * {
+      margin: 0;
+      margin-right: $value;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:lang(ar) {
+        margin-right: 0;
+        margin-left: $value;
+        &:last-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@mixin active-active-bar {
+  .active-bar {
+      background: $secondary-color;
+      height: 1.6px;
+      transform: scaleX(0);
+      transition: transform 0.6s, background 0.6s;
+  }
+  &.active {
+      a {
+          color: $secondary-color;
+      }
+      .active-bar {
+          transform: scaleX(1);
+      }
+  }
+  &:hover {
+      .active-bar {
+          transform: scaleX(1);
+      }
+  }
+}
+
+@mixin color-overlay($color, $opacity) {
+  &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba($color, $opacity);
+      z-index: 200;
+  }
+}
+
+// utlility classes
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+
+.h1--main {
+  font-size: 2.625rem;
+  font-weight: 700;
+  color: $white;
+}
+
+.h2--main {
+  font-size: 1.625rem;
+  font-weight: 400;
+  color: $white;
+  span {
+    font-weight: 500;
+  }
+}
+
+.h1--txt {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: $primary-color;
+}
+
+.h2--txt {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.35rem;
+  color: $primary-color;
+  span {
+    font-weight: 500;
+  }
+}
+
+.normal--txt {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.1rem;
+  color: $primary-color;
+}
+
+.menu__txt {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.375rem;
+  text-transform: capitalize;
+  color: $primary-color;
+  display: flex;
+  align-items: center;
+  img {
+    margin-left: 0.5rem;
+    margin-top: 2px;
+    &:lang(ar) {
+      margin-left: 0.5rem;
+      margin-right: 0;
+    }
+  }
+  &.white {
+    color: $white;
+  }
+}
+
+.light__txt {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.375rem;
+  color: $secondary-typo;
+}
+
+.small__light__txt {
+  font-size: 0.75em;
+  font-weight: 400;
+  line-height: 1em;
+  color: $secondary-typo;
+}
+
+.btn__txt {
+  font-size: 0.875em;
+  font-weight: 700;
+  line-height: 1.625em;
+  color: $white;
+}
+
+.black {
+  color: $main-typo;
+}
+
+.green {
+  color: $green;
+}
+.red {
+  color: $red;
+}
+
+.btn__primary {
+  background: $primary-color;
+  color: $white;
+}
+
+.btn__success {
+  background: $green;
+  color: $white;
+}
+
+.btn__trans {
+  background: transparent;
+}

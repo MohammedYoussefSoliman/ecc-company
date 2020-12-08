@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="linkedin-upper" transform="translate(-216 -12)">
+    <g id="Rectangle_65" data-name="Rectangle 65" transform="translate(216 12)" fill="none" stroke="#ffde5c" stroke-width="1">
+      <rect width="20" height="20" stroke="none"/>
+      <rect x="0.5" y="0.5" width="19" height="19" fill="none"/>
+    </g>
+    <path id="Icon_awesome-linkedin-in" data-name="Icon awesome-linkedin-in" d="M2.462,11H.182V3.656H2.462ZM1.321,2.655A1.327,1.327,0,1,1,2.641,1.321,1.332,1.332,0,0,1,1.321,2.655ZM11,11H8.722V7.425c0-.852-.017-1.945-1.186-1.945-1.186,0-1.367.926-1.367,1.883V11H3.891V3.656H6.078v1H6.11A2.4,2.4,0,0,1,8.268,3.472C10.576,3.472,11,4.992,11,6.966V11Z" transform="translate(221 16.999)" fill="#ffde5c"/>
+  </g>
+</svg>
