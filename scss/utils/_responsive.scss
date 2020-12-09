@@ -41,3 +41,58 @@
     }
   }
 }
+
+
+@include breakpoints(ipad) {
+  .menu__txt {
+    font-size: 0.85rem;
+  }
+  
+  .header--wrapper {
+    .header {
+      .nav {
+        @include gap(1.5rem, row);
+      }
+    }
+  }
+}
+
+@include breakpoints(largmobile) {
+  
+  .h1--main {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .h2--main {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+
+  .h1--txt {
+    font-size: 1rem;
+  }
+
+  .normal--txt {
+    font-size: 0.8rem;
+  }
+
+  .header--wrapper {
+    .header {
+      .nav {
+        &__list {
+          &--item  {
+            display: none;
+            &:last-child {
+              display: block;
+              margin-left: auto;
+            }
+            .toggle--mobile--nav {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
