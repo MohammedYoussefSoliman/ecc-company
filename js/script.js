@@ -1,12 +1,26 @@
 "use strict";
 
 const anchors = document.querySelectorAll('.anchor');
+const header = document.getElementById('header');
 
 anchors.forEach( anchor => {
     anchor.addEventListener('click', ()=> {
         anchor.classList.toggle('arrow__rotate')
     })
 })
+
+// navbar scroll
+
+const scrollHeader = () => {
+    if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 300) {
+        header.classList.add('pages');
+      } else {
+        header.classList.remove('pages');
+      }
+}
+
+window.onscroll =scrollHeader;
+
 // mobile nav
 
 const mobileMenu = document.querySelector('.toggle--mobile--nav');
@@ -33,6 +47,17 @@ $('.ecc--hero--list').owlCarousel({
     animateIn: 'fadeIn',
     animateOut: 'fadeOut',
     smartSpeed:3000
+});
+
+$('.about--carousel').owlCarousel({
+    items:1,
+    loop:true,
+    autoplay:true,
+    pagination: false,
+    dots: false,
+    nav: true,
+    smartSpeed :900,
+    navText : ["<img draggable='false' src='./images/icons/slider_left_arrow.svg'>","<img draggable='false' src='./images/icons/slider_right_arrow.svg'>"]
 });
 
 

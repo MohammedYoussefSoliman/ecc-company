@@ -211,4 +211,42 @@
   background: transparent;
 }
 
+.section--header {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 800;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  text-transform: capitalize;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 75px;
+    background: $secondary-color;
+
+  }
+}
+
+.h3--txt {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.p--bold {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.section--a {
+  background: url('../images/bg2-grey.jpg') center;
+  padding: 4rem 0 6rem 0;
+}
+
+.section--b {
+  background: url('../images/bg1.jpg') center;
+  padding: 4rem 0 6rem 0;
+
+}
 

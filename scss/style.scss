@@ -13,8 +13,15 @@
   display: flex;
   flex-direction: column;
   &.pages {
-    border-bottom: 3px solid $secondary-color;
+    border-bottom: 2px solid $secondary-color;
     background-color: $primary-color;
+    .header {
+      .header__settings {
+        height: 0;
+        transition: height 0.5s ease;
+        overflow: hidden;
+      }
+    }
   }
   .header {
     height: 100%;
@@ -286,6 +293,98 @@
   display: flex;
   width: 200px;
   justify-content: space-between;
+}
+
+.about {
+  &--cards {
+    display: flex;
+    &__item {
+      position: relative;
+      height: 300px;
+      width: 300px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      margin-right: 2rem;
+      .scroll--item {
+        @include color-overlay($primary-color, 0.5);
+        padding: 2rem;
+        height: 300px;
+        width: 300px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        .card--content {
+          transform: translateY(0);
+        }
+      }
+      .slider--bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .card--content {
+      z-index: 200;
+      transform: translateY(68px);
+      transition: transform 0.5s ease;
+      margin-top: 2rem;
+    }
+    .card--title {
+      color: $secondary-color;
+      margin-bottom: 2rem;
+      text-transform: capitalize;
+    }
+    .card--desc {
+      margin-bottom: 4rem;
+    }
+    .card--link {
+      width: 100%;
+      display: block;
+      color: $secondary-color;
+      text-decoration: underline;
+      font-weight: 600;
+      text-align: right;
+    }
+  }
+  .about--slider__nav {
+    position: absolute;
+    top: 0;
+    right: 32px;
+    justify-content: space-between;
+    width: 280px;
+    display: flex;
+    z-index: 300;
+    cursor: pointer;
+  }
+  .owl-theme .owl-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    .owl-prev, .owl-next {
+      position: absolute;
+      top: 0;
+      margin: 0;
+      z-index: 300;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    .owl-prev {
+      left: 0;
+    }
+    .owl-next {
+      right: 0
+    }
+  }
 }
 
 @import "./utils/responsive";
