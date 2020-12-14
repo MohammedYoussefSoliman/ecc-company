@@ -42,7 +42,7 @@ a {
 
 img {
   display: block;
-  max-width: 100%;
+  // max-width: 100%;
 }
 
 body {
@@ -53,6 +53,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 6px;
+  display: none;
 }
 
 /* Track */

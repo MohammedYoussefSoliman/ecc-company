@@ -343,14 +343,6 @@
     .card--desc {
       margin-bottom: 4rem;
     }
-    .card--link {
-      width: 100%;
-      display: block;
-      color: $secondary-color;
-      text-decoration: underline;
-      font-weight: 600;
-      text-align: right;
-    }
   }
   .about--slider__nav {
     position: absolute;
@@ -377,12 +369,198 @@
         width: 50px;
         height: 50px;
       }
+      outline: none;
+      &:focus {
+        outline: none;
+      }
     }
     .owl-prev {
       left: 0;
     }
     .owl-next {
       right: 0
+    }
+  }
+}
+
+.services {
+  .services--list {
+    // display: flex;
+    // @include gap(2rem, row);
+    > * {
+      // flex: 1;
+    }
+    &__item {
+      position: relative;
+      height: 540px;
+      // width: 460px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      .service--bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .service--icon {
+        background: url('../images/icons/icon_shape.svg') center top no-repeat;
+        margin-left: 2rem;
+        width: 100px;
+        height: 100px;
+        padding: 1rem;
+        @include center-content-x;
+        z-index: 300;
+      }
+      .service--content {
+        padding: 2rem;
+        margin-top: -50px;
+        background: rgba($primary-color, 0.65);
+      }
+      .service--title {
+        color: $secondary-color;
+        margin-top: 1rem;
+      }
+      .service--body {
+        color: $white;
+        font-size: 0.8rem;
+      }
+      .service--link {
+        padding: 0.6rem 1.25rem;
+        width: 150px;
+        background: rgba($primary-color, 0.65);
+        align-self: flex-end;
+        z-index: 100;
+        margin-bottom: 2.4rem;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 15% 100%);
+      }
+    }
+  }
+
+  // owl config
+  .owl-theme {
+    margin: 0;
+  }
+  .owl-carousel .owl-stage {
+    display: flex;
+    align-items: center;
+  }
+  
+  .owl-theme .owl-nav {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    .owl-prev, .owl-next {
+      position: absolute;
+      top: 0;
+      margin: 0;
+      z-index: 300;
+      img {
+        width: 70px;
+        height: 70px;
+      }
+      outline: none;
+      &:focus {
+        outline: none;
+      }
+    }
+    .owl-prev {
+      left: 0;
+    }
+    .owl-next {
+      right: 0
+    }
+  }
+}
+
+.corp {
+  .corp--list {
+    display: flex;
+    align-items: center;
+    @include gap(2rem, row);
+    > * {
+      flex: 1;
+    }
+  }
+}
+
+.projects {
+  padding: 0;
+  &--list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    > * {
+      flex: 1;
+      @include color-overlay($primary-color, 0.5);
+    }
+    &__item {
+      position: relative;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+      overflow: hidden;
+      &.btn--item {
+        justify-content: center;
+        align-items: center;
+        &::before {
+          content: none;
+        }
+      }
+      .project--bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .project--title {
+        color: $secondary-color;
+        margin-bottom: 1rem;
+
+      }
+      .project--content {
+        z-index: 300;
+        transition: transform 0.5s ease;
+        transform: translateY(3.5rem);
+        &:hover {
+          transform: translateY(0);
+        }
+      }
+      .project--info {
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        &__item {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          .info--icon {
+            margin-right: 0.6rem;
+          }
+          .info--title {
+            font-size: 12px;
+            font-weight: 500;
+          }
+        }
+      }
+      .project--btn {
+        cursor: pointer;
+        color: $secondary-color;
+        background: $primary-color;
+        padding: 12px 30px;
+        font-size: 1rem;
+        font-weight: 500;
+        border: 1px solid $secondary-color;
+      }
     }
   }
 }

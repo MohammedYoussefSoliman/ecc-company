@@ -250,3 +250,31 @@
 
 }
 
+.decorations {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  img {
+    width: auto !important
+  }
+  &--right {
+    align-self: flex-end;
+  }
+  &--left {
+    align-self: flex-start;
+  }
+}
+
+.generic--link {
+  width: 100%;
+  display: block;
+  color: $secondary-color;
+  text-decoration: underline;
+  font-weight: 600;
+  text-align: right;
+}
