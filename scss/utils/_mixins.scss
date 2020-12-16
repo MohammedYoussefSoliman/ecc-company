@@ -240,12 +240,12 @@
 }
 
 .section--a {
-  background: url('../images/bg2-grey.jpg') center;
+  background: url('../images/bg2-grey.jpg') center/cover no-repeat;
   padding: 4rem 0 6rem 0;
 }
 
 .section--b {
-  background: url('../images/bg1.jpg') center;
+  background: url('../images/bg1.jpg') center/cover no-repeat;
   padding: 4rem 0 6rem 0;
 
 }

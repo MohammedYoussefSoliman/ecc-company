@@ -314,12 +314,12 @@ body {
 }
 
 .section--a {
-  background: url("../images/bg2-grey.jpg") center;
+  background: url("../images/bg2-grey.jpg") center/cover no-repeat;
   padding: 4rem 0 6rem 0;
 }
 
 .section--b {
-  background: url("../images/bg1.jpg") center;
+  background: url("../images/bg1.jpg") center/cover no-repeat;
   padding: 4rem 0 6rem 0;
 }
 
@@ -1274,6 +1274,107 @@ body {
   font-size: 1rem;
   font-weight: 500;
   border: 1px solid #ffde5c;
+}
+
+.certificates .certificate--list__item {
+  position: relative;
+  border: 1px solid #1e2611;
+  padding: 32px 52px;
+  height: 575px;
+  background: #f7f7f7;
+  overflow: hidden;
+}
+
+.certificates .certificate--list__item .certificate--img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.certificates .owl-theme {
+  margin: 0;
+}
+
+.certificates .owl-carousel .owl-stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.certificates .owl-theme .owl-nav {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.certificates .owl-theme .owl-nav .owl-prev, .certificates .owl-theme .owl-nav .owl-next {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  z-index: 300;
+  outline: none;
+}
+
+.certificates .owl-theme .owl-nav .owl-prev img, .certificates .owl-theme .owl-nav .owl-next img {
+  width: 70px;
+  height: 70px;
+}
+
+.certificates .owl-theme .owl-nav .owl-prev:focus, .certificates .owl-theme .owl-nav .owl-next:focus {
+  outline: none;
+}
+
+.certificates .owl-theme .owl-nav .owl-prev {
+  left: 0;
+}
+
+.certificates .owl-theme .owl-nav .owl-next {
+  right: 0;
+}
+
+.commitments .commitments--intro {
+  margin: 2rem 0;
+}
+
+.commitments .commitments--item {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.commitments .commitments--item:last-child {
+  margin-bottom: 0;
+}
+
+.commitments .commitments--item__anchor {
+  width: 100%;
+  background: #1e2611;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2rem;
+  border: 1px solid #ffde5c;
+}
+
+.commitments .commitments--item__anchor span {
+  color: #ffde5c;
+}
+
+.commitments .commitments--item .commitments--item--content {
+  border: 1px solid #ffde5c;
+  background: #ffffff;
+  padding: 2rem;
 }
 
 @media screen and (max-width: 1024px) {

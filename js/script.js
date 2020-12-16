@@ -79,6 +79,25 @@ $('.services--list').owlCarousel({
     navText : ["<img draggable='false' src='./images/icons/slider_left_arrow.svg'>","<img draggable='false' src='./images/icons/slider_right_arrow.svg'>"]
 });
 
+$('.certificate--list').owlCarousel({
+    items:1,
+    loop:true,
+    pagination: false,
+    dots: false,
+    nav: true,
+    margin: 32,
+    mouseDrag: true,
+    responsive:{
+        600:{
+            items:1,
+        },
+        700:{
+            items:2,
+        },
+    },
+    navText : ["<img draggable='false' src='./images/icons/slider_left_arrow.svg'>","<img draggable='false' src='./images/icons/slider_right_arrow.svg'>"]
+});
+
 
 // section animation
 
