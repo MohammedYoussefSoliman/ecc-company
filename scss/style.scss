@@ -12,9 +12,11 @@
   z-index: 1000;
   display: flex;
   flex-direction: column;
+
   &.pages {
     border-bottom: 2px solid $secondary-color;
     background-color: $primary-color;
+
     .header {
       .header__settings {
         height: 0;
@@ -23,21 +25,26 @@
       }
     }
   }
+
   .header {
     height: 100%;
+
     &__settings {
       width: 100%;
       display: flex;
       justify-content: flex-end;
+
       .settings__list {
         margin: 0;
         margin-top: 0.75rem;
         display: flex;
         align-items: center;
         @include gap(0.5rem, row);
+
         &--item {
           &:last-child {
             margin-left: 2rem;
+
             &:lang(ar) {
               margin-left: 0;
               margin-right: 2rem;
@@ -46,24 +53,30 @@
         }
       }
     }
+
     .nav {
       display: flex;
       align-items: center;
       @include gap(3.5rem, row);
       height: 80px;
+
       &__logo {
         max-width: 120px;
+
         img {
           width: 100%;
         }
       }
+
       &__list {
         display: flex;
         flex: 1;
         justify-content: space-between;
         margin: 0;
+
         &--item {
           position: relative;
+
           &.menu--dropper {
             .dropdown--list {
               margin: 0;
@@ -74,33 +87,41 @@
               width: 220px;
               background: $primary-color;
               display: none;
+
               &__item {
                 width: 100%;
                 background: $secondary-color;
                 margin-bottom: 1px;
+
                 .anchor {
                   padding: 0.75rem 1rem;
                 }
+
                 &:hover {
                   background: $yellow;
                 }
               }
 
             }
+
             &:hover {
               .dropdown--list {
                 display: block;
               }
             }
           }
+
           height: 100%;
+
           .menu--anchor {
             margin-bottom: 0.8rem;
           }
+
           .toggle--mobile--nav {
             display: none;
             cursor: pointer;
           }
+
           @include active-active-bar;
         }
       }
@@ -108,6 +129,7 @@
   }
 
 }
+
 .mobile--aside {
   width: 300px;
   position: absolute;
@@ -119,15 +141,19 @@
   display: flex;
   flex-direction: column;
   transform: translateX(100%);
+
   &.open {
     transform: translateX(0);
   }
+
   transition: transform 0.8s ease-in-out;
+
   &__header {
     padding: 1.25rem;
     width: 100%;
     background: $secondary-color;
     margin-bottom: 1px;
+
     .close--anchor {
       @include center-content-x;
       width: 40px;
@@ -135,33 +161,42 @@
       border: 1px solid $primary-color;
       margin-bottom: 1rem;
       cursor: pointer;
+
       img {
         max-width: 20px;
       }
     }
   }
+
   &__body {
     width: 100%;
   }
+
   .aside--list {
     margin: 0;
     width: 100%;
+
     &__item {
       width: 100%;
       background: $secondary-color;
       margin-bottom: 1px;
+
       .anchor {
         padding: 0.75rem 1rem;
       }
+
       .pos-relative {
         background: $primary-color;
       }
+
       .collapse--list {
         list-style: none;
         margin: 0;
         padding: 0;
+
         &__item {
           border-bottom: 1px solid $secondary-color;
+
           .anchor {
             font-size: 0.9rem;
             padding: 0.75rem 1rem;
@@ -170,6 +205,7 @@
       }
     }
   }
+
   &__footer {
     flex: 1;
     padding: 1.2rem;
@@ -177,8 +213,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    .aside--address {
-    }
+
     .normal--txt {
       display: block;
       font-size: 0.75rem;
@@ -186,6 +221,7 @@
       text-align: center;
     }
   }
+
   &:lang(ar) {
     right: auto;
     left: 0;
@@ -199,6 +235,7 @@
   transform: translateY(-50%);
   width: 225px;
   z-index: 901;
+
   &__item {
     background: $secondary-color;
     height: 50px;
@@ -208,13 +245,16 @@
     align-items: center;
     transform: translateX(175px);
     transition: transform 0.6s ease-in-out;
+
     &:hover {
       transform: translateX(0);
     }
+
     .sticky-item-icons {
       width: 50px;
       @include center-content-x;
     }
+
     .sticky-item-content {
       flex: 1;
       display: flex;
@@ -222,6 +262,7 @@
       font-size: 13px;
       font-weight: 600;
       cursor: pointer;
+
       img {
         margin: 0 0.75rem;
       }
@@ -233,17 +274,20 @@
   height: 100vh;
   width: 100vw;
   position: relative;
+
   &--list {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
+
     &__item {
       position: relative;
       height: 100%;
       width: 100%;
       @include center-content-y;
       @include color-overlay(#000, 0.7);
+
       img {
         position: absolute;
         width: 100%;
@@ -251,33 +295,42 @@
         object-fit: cover;
         margin: 0 !important;
       }
+
       .content {
         z-index: 900;
         @include center-content-y;
         max-width: 700px;
+
         .h1--main {
           margin-bottom: 2rem;
         }
+
         .h2--main {
           text-align: center;
         }
       }
     }
   }
-  .owl-item, .item {
+
+  .owl-item,
+  .item {
     height: 100vh;
   }
+
   .owl-theme .owl-dots {
     position: absolute;
     bottom: 32px;
     width: 100%;
+
     .owl-dot {
       margin: 0 1rem;
       height: 20px;
       width: 20px;
+
       &.active {
         border: 1px solid $secondary-color;
       }
+
       span {
         background: #FFFFFF;
         border-radius: 0;
@@ -298,6 +351,7 @@
 .about {
   &--cards {
     display: flex;
+
     &__item {
       position: relative;
       height: 300px;
@@ -306,20 +360,24 @@
       align-items: center;
       overflow: hidden;
       margin-right: 2rem;
+
       .scroll--item {
         @include color-overlay($primary-color, 0.5);
         padding: 2rem;
         height: 300px;
         width: 300px;
       }
+
       &:last-child {
         margin-right: 0;
       }
+
       &:hover {
         .card--content {
           transform: translateY(0);
         }
       }
+
       .slider--bg {
         position: absolute;
         top: 0;
@@ -329,21 +387,25 @@
         object-fit: cover;
       }
     }
+
     .card--content {
       z-index: 200;
       transform: translateY(68px);
       transition: transform 0.5s ease;
       margin-top: 2rem;
     }
+
     .card--title {
       color: $secondary-color;
       margin-bottom: 2rem;
       text-transform: capitalize;
     }
+
     .card--desc {
       margin-bottom: 4rem;
     }
   }
+
   .about--slider__nav {
     position: absolute;
     top: 0;
@@ -354,29 +416,37 @@
     z-index: 300;
     cursor: pointer;
   }
+
   .owl-theme .owl-nav {
     position: absolute;
     top: 0;
     right: 0;
     margin: 0;
     width: 100%;
-    .owl-prev, .owl-next {
+
+    .owl-prev,
+    .owl-next {
       position: absolute;
       top: 0;
       margin: 0;
       z-index: 300;
+
       img {
         width: 50px;
         height: 50px;
       }
+
       outline: none;
+
       &:focus {
         outline: none;
       }
     }
+
     .owl-prev {
       left: 0;
     }
+
     .owl-next {
       right: 0
     }
@@ -385,11 +455,13 @@
 
 .services {
   .services--list {
+
     // display: flex;
     // @include gap(2rem, row);
-    > * {
+    >* {
       // flex: 1;
     }
+
     &__item {
       position: relative;
       height: 540px;
@@ -397,6 +469,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+
       .service--bg {
         position: absolute;
         top: 0;
@@ -405,6 +478,7 @@
         height: 100%;
         object-fit: cover;
       }
+
       .service--icon {
         background: url('../images/icons/icon_shape.svg') center top no-repeat;
         margin-left: 2rem;
@@ -414,19 +488,23 @@
         @include center-content-x;
         z-index: 300;
       }
+
       .service--content {
         padding: 2rem;
         margin-top: -50px;
         background: rgba($primary-color, 0.65);
       }
+
       .service--title {
         color: $secondary-color;
         margin-top: 1rem;
       }
+
       .service--body {
         color: $white;
         font-size: 0.8rem;
       }
+
       .service--link {
         padding: 0.6rem 1.25rem;
         width: 150px;
@@ -443,34 +521,42 @@
   .owl-theme {
     margin: 0;
   }
+
   .owl-carousel .owl-stage {
     display: flex;
     align-items: center;
   }
-  
+
   .owl-theme .owl-nav {
     position: absolute;
     top: 25%;
     right: 0;
     margin: 0;
     width: 100%;
-    .owl-prev, .owl-next {
+
+    .owl-prev,
+    .owl-next {
       position: absolute;
       top: 0;
       margin: 0;
       z-index: 300;
+
       img {
         width: 70px;
         height: 70px;
       }
+
       outline: none;
+
       &:focus {
         outline: none;
       }
     }
+
     .owl-prev {
       left: 0;
     }
+
     .owl-next {
       right: 0
     }
@@ -482,7 +568,8 @@
     display: flex;
     align-items: center;
     @include gap(2rem, row);
-    > * {
+
+    >* {
       flex: 1;
     }
   }
@@ -490,15 +577,18 @@
 
 .projects {
   padding: 0;
+
   &--list {
     height: 100%;
     display: flex;
     align-items: center;
     margin: 0;
-    > * {
+
+    >* {
       flex: 1;
       @include color-overlay($primary-color, 0.5);
     }
+
     &__item {
       position: relative;
       height: 300px;
@@ -507,13 +597,16 @@
       justify-content: flex-end;
       padding: 2rem;
       overflow: hidden;
+
       &.btn--item {
         justify-content: center;
         align-items: center;
+
         &::before {
           content: none;
         }
       }
+
       .project--bg {
         position: absolute;
         top: 0;
@@ -522,36 +615,44 @@
         width: 100%;
         object-fit: cover;
       }
+
       .project--title {
         color: $secondary-color;
         margin-bottom: 1rem;
 
       }
+
       .project--content {
         z-index: 300;
         transition: transform 0.5s ease;
         transform: translateY(3.5rem);
+
         &:hover {
           transform: translateY(0);
         }
       }
+
       .project--info {
         margin-bottom: 2rem;
         display: flex;
         align-items: center;
+
         &__item {
           flex: 1;
           display: flex;
           align-items: center;
+
           .info--icon {
             margin-right: 0.6rem;
           }
+
           .info--title {
             font-size: 12px;
             font-weight: 500;
           }
         }
       }
+
       .project--btn {
         cursor: pointer;
         color: $secondary-color;
@@ -574,6 +675,7 @@
       height: 575px;
       background: #f7f7f7;
       overflow: hidden;
+
       .certificate--img {
         width: 100%;
         height: 100%;
@@ -586,34 +688,42 @@
   .owl-theme {
     margin: 0;
   }
+
   .owl-carousel .owl-stage {
     display: flex;
     align-items: center;
   }
-  
+
   .owl-theme .owl-nav {
     position: absolute;
     top: 45%;
     right: 0;
     margin: 0;
     width: 100%;
-    .owl-prev, .owl-next {
+
+    .owl-prev,
+    .owl-next {
       position: absolute;
       top: 0;
       margin: 0;
       z-index: 300;
+
       img {
         width: 70px;
         height: 70px;
       }
+
       outline: none;
+
       &:focus {
         outline: none;
       }
     }
+
     .owl-prev {
       left: 0;
     }
+
     .owl-next {
       right: 0
     }
@@ -624,12 +734,16 @@
   .commitments--intro {
     margin: 2rem 0;
   }
+
   .commitments--item {
     margin-bottom: 2rem;
+
     &:last-child {
       margin-bottom: 0;
     }
+
     width: 100%;
+
     &__anchor {
       width: 100%;
       background: $primary-color;
@@ -638,10 +752,12 @@
       align-items: center;
       padding: 1rem 2rem;
       border: 1px solid $secondary-color;
+
       span {
         color: $secondary-color;
       }
     }
+
     .commitments--item--content {
       border: 1px solid $secondary-color;
       background: $white;
@@ -650,6 +766,99 @@
   }
 }
 
+.footer {
+  background: $primary-color;
+  padding-bottom: 3rem;
+  .footer--logo {
+    width: 220px;
+    margin-bottom: 2rem;
+  }
+  .footer--content {
+    display: flex;
+    border-bottom: 1px solid $secondary-color;
+    padding-bottom: 2rem;
+    > * {
+      margin-left: 2rem;
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+    .contact--list {
+      max-width: 45%;
+      &__item {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 1.5rem;
+        }
+        h4 {
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 24px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .footer--quick {
+      .quick--list {
+        &__item {
+          margin-bottom: 0.75rem;
+          display: flex;
+          align-items: center;
+          img {
+            margin-right: 1rem;
+          }
+          &:last-child {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+      .footer--social {
+        display: flex;
+        > * {
+          margin-right: 1rem;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .footer--services {
+      .service--list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        &__item {
+          margin-bottom: 0;
+          display: flex;
+          align-items: center;
+          img {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .copyrights {
+    padding-top: 2rem;
+    @include center-content-x;
+    p {
+      font-size: 0.875rem;
+      color: $white;
+    }
+  }
+  .h3--txt {
+    color: $secondary-color;
+    margin-bottom: 1rem;
+  }
+  .quick--link {
+    color: $white;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}
+
 @import "./utils/responsive";
-
-

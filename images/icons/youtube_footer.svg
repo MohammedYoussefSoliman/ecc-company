@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="youtube_footer" transform="translate(-696 -5407)">
+    <path id="youtube" d="M16.716,6.26A2.01,2.01,0,0,0,15.3,4.837,47.51,47.51,0,0,0,9.05,4.5,47.511,47.511,0,0,0,2.8,4.837,2.01,2.01,0,0,0,1.384,6.26a21.09,21.09,0,0,0-.334,3.876,21.09,21.09,0,0,0,.334,3.876,1.98,1.98,0,0,0,1.415,1.4,47.511,47.511,0,0,0,6.251.337,47.511,47.511,0,0,0,6.251-.337,1.98,1.98,0,0,0,1.415-1.4,21.09,21.09,0,0,0,.334-3.876,21.09,21.09,0,0,0-.334-3.876Zm-9.3,6.255V7.757L11.6,10.136,7.414,12.515Z" transform="translate(701.95 5411.5)" fill="#ffde5c"/>
+    <g id="Rectangle_120" data-name="Rectangle 120" transform="translate(696 5407)" fill="none" stroke="#ffde5c" stroke-width="1">
+      <rect width="30" height="30" stroke="none"/>
+      <rect x="0.5" y="0.5" width="29" height="29" fill="none"/>
+    </g>
+  </g>
+</svg>
