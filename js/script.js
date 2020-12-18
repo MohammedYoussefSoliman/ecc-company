@@ -101,4 +101,8 @@ $('.certificate--list').owlCarousel({
 
 // section animation
 
-AOS.init();
+AOS.init({
+    offset: 150,
+    delay: 100,
+    duration: 1000
+});

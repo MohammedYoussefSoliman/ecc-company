@@ -128,12 +128,18 @@
   span {
     font-weight: 500;
   }
+  &:lang(ar) {
+    text-align: right;
+  }
 }
 
 .normal--txt {
   font-size: 1rem;
   font-weight: 500;
   color: $primary-color;
+  &:lang(ar) {
+    text-align: right;
+  }
 }
 
 .menu__txt {
@@ -143,10 +149,17 @@
   color: $primary-color;
   display: flex;
   align-items: center;
+  &:lang(ar) {
+    text-align: right;
+    direction: rtl;
+  }
 }
 
 .anchor {
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  min-width: 75px;
   img {
     margin-left: 0.5rem;
     margin-top: 2px;
@@ -161,12 +174,20 @@
       transform: rotate(180deg);
     }
   }
+  &:lang(ar) {
+    text-align: right;
+    direction: rtl;
+  }
 }
 
 .light__txt {
   font-size: 1rem;
   font-weight: 500;
   color: $secondary-typo;
+  &:lang(ar) {
+    text-align: right;
+    direction: rtl;
+  }
 }
 
 .small__light__txt {
@@ -174,12 +195,20 @@
   font-weight: 400;
   line-height: 1em;
   color: $secondary-typo;
+  &:lang(ar) {
+    text-align: right;
+    direction: rtl;
+  }
 }
 
 .btn__txt {
   font-size: 0.875em;
   font-weight: 700;
   color: $white;
+  &:lang(ar) {
+    text-align: right;
+    direction: rtl;
+  }
 }
 
 .white {
@@ -227,16 +256,30 @@
     background: $secondary-color;
 
   }
+  &:lang(ar) {
+    direction: rtl;
+    &::before {
+      content: '';
+      bottom: 0;
+      right: 0;
+    }
+  }
 }
 
 .h3--txt {
   font-size: 18px;
   font-weight: 600;
+  &:lang(ar) {
+    direction: rtl;
+  }
 }
 
 .p--bold {
   font-size: 14px;
   font-weight: 500;
+  &:lang(ar) {
+    direction: rtl;
+  }
 }
 
 .section--a {
@@ -277,4 +320,8 @@
   text-decoration: underline;
   font-weight: 600;
   text-align: right;
+  &:lang(ar) {
+    direction: rtl;
+    text-align: left;
+  }
 }
