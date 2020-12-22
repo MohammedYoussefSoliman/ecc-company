@@ -274,7 +274,7 @@ body:lang(ar) {
 .light__txt {
   font-size: 1rem;
   font-weight: 500;
-  color: #999cad;
+  color: #818181;
 }
 
 .light__txt:lang(ar) {
@@ -286,7 +286,7 @@ body:lang(ar) {
   font-size: 0.75em;
   font-weight: 400;
   line-height: 1em;
-  color: #999cad;
+  color: #818181;
 }
 
 .small__light__txt:lang(ar) {
@@ -442,7 +442,7 @@ body:lang(ar) {
   top: 0;
   background: transparent;
   width: 100%;
-  z-index: 1000;
+  z-index: 1100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1755,6 +1755,258 @@ body:lang(ar) {
 
 .footer .quick--link:lang(ar) {
   text-align: right;
+}
+
+.main--page__banner {
+  height: 300px;
+  background: url("../images/dayne-topkin-Sk-C-om9Jz8-unsplash.jpg") center/cover no-repeat;
+  padding: 3rem 0;
+}
+
+.main--page__banner::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(30, 38, 17, 0.7);
+  z-index: 200;
+}
+
+.main--page__banner .banner--header {
+  z-index: 1000;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main--page__banner .banner--header .h1--main {
+  color: #ffde5c;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 560px;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+.contact--map {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  height: 100%;
+}
+
+.contact--map img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contact--form {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  height: 100%;
+  padding: 3rem;
+  padding-bottom: 0;
+  padding-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact--form__left {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  padding-right: 3rem;
+}
+
+.contact--form__left .input--group {
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.contact--form__left .input--group .input--item {
+  display: block;
+  background: transparent;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 1px solid #1e2611;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.contact--form__left .check--group .input--check {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact--form__left .check--group .input--check .input--item {
+  cursor: pointer;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.contact--form__left .check--group .input--check .check--box {
+  cursor: pointer;
+  border: 1px solid #1e2611;
+  width: 24px;
+  height: 24px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin-right: 1rem;
+}
+
+.contact--form__left .check--group .input--check .check--label {
+  font-weight: 500;
+}
+
+.contact--form__left .check--group.selected {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.contact--form__left .check--group.selected:before, .contact--form__left .check--group.selected:after {
+  content: none;
+}
+
+.contact--form__left .check--group.selected .check--box {
+  background-color: #ffde5c;
+  background-image: url("../images/icons/check.svg");
+}
+
+.contact--form__right {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact--form__right .message--area {
+  border-left: 1px solid #1e2611;
+  -webkit-box-flex: 9;
+      -ms-flex: 9;
+          flex: 9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact--form__right .message--area .message--label {
+  margin-bottom: 2rem;
+}
+
+.contact--form__right .message--area .message--item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  resize: none;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.contact--form__right .message--area .message--item:focus {
+  outline: none;
+}
+
+.contact--form__right .message--area .message--item::-webkit-input-placeholder {
+  color: #1e2611;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.contact--form__right .message--area .message--item:-ms-input-placeholder {
+  color: #1e2611;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.contact--form__right .message--area .message--item::-ms-input-placeholder {
+  color: #1e2611;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.contact--form__right .message--area .message--item::placeholder {
+  color: #1e2611;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.contact--form__right .submit--group {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #ffde5c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 64px;
+  cursor: pointer;
+}
+
+.contact--form__right .submit--group button {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: #1e2611;
+  font-weight: 600;
+  outline: none;
+}
+
+.contact--form .input--label {
+  display: block;
+  color: #818181;
+  font-weight: 300;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 1024px) {
