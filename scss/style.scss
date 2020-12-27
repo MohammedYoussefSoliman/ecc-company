@@ -1022,9 +1022,16 @@
     padding-bottom: 0;
     padding-right: 0;
     display: flex;
+    &:lang(ar) {
+      direction: rtl;
+      padding-left: 0;
+    }
     &__left {
       flex: 3;
       padding-right: 3rem;
+      &:lang(ar) {
+        padding-left: 3rem;
+      }
       .input--group {
         margin-bottom: 2.5rem;
         width: 100%;
@@ -1044,6 +1051,7 @@
           position: relative;
           display: flex;
           align-items: center;
+          margin-bottom: 2rem;
           .input--item {
             cursor: pointer;
             opacity: 0;
@@ -1060,6 +1068,10 @@
             background-position: 50% 50%;
             background-repeat: no-repeat;
             margin-right: 1rem;
+            &:lang(ar) {
+              margin-right: 0;
+              margin-left: 1rem;
+            }
           }
           .check--label {
             font-weight: 500;
@@ -1075,12 +1087,18 @@
             background-image: url('../images/icons/check.svg');
           }
         }
+        &:lang(ar) {
+          direction: rtl;
+        }
       }
     }
     &__right {
       flex: 5;
       display: flex;
       flex-direction: column;
+      &:lang(ar) {
+        direction: rtl;
+      }
       .message--area {
         border-left: 1px solid $primary-color;
         flex: 9;
@@ -1105,6 +1123,15 @@
             font-weight: 600;
             font-size: 1.2rem;
           }
+          &:lang(ar) {
+            direction: rtl;
+          }
+        }
+        &:lang(ar) {
+          padding-right: 2rem;
+          padding-left: 0;
+          border-left: none;
+          border-right: 1px solid $primary-color;
         }
       }
       .submit--group {
@@ -1134,5 +1161,37 @@
   }
 
 }
+
+.page {
+  display: flex;
+  &--aside {
+    flex: 2;
+    margin-right: 2rem;
+    .aside--list {
+      width: 100%;
+      &__item {
+        border-bottom: 1px solid $secondary-color;
+        background: $primary-color;
+        padding: 0.75rem 1.5rem;
+        &:last-child {
+          border-bottom: none;
+        }
+        .aside--anchor {
+          color: $white;
+        }
+      }
+    }
+  }
+  &--content {
+    flex: 4;
+    margin-right: 2rem;
+
+  }
+  &--img {
+    flex: 3
+  }
+}
+
+
 
 @import "./utils/responsive";

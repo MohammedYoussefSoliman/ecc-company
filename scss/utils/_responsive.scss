@@ -55,6 +55,11 @@
       }
     }
   }
+
+  .contact {
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 @include breakpoints(tablet) {
@@ -106,6 +111,15 @@
           gap: 1rem;
         }
       }
+    }
+  }
+
+  .page {
+    flex-direction: column;
+    > * {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 2rem;
     }
   }
 
@@ -210,6 +224,39 @@
           height: 100%;
           object-fit: cover;
         }
+      }
+    }
+  }
+
+  .contact {
+    &--form {
+      flex-direction: column;
+      padding: 2rem !important;
+      &__left {
+        &:lang(ar) {
+          padding-right: 0;
+        }
+      }
+      &__right {
+        .message--area {
+          border: none !important;
+          padding: 0 !important;
+          height: 200px;
+          &::placeholder {
+            color: $primary-color;
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    .footer--content {
+      > * {
+        margin-right: 2rem !important;
       }
     }
   }

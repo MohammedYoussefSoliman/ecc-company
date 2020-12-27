@@ -1,7 +1,7 @@
 "use strict";
 
 const anchors = document.querySelectorAll('.anchor');
-const header = document.getElementById('header');
+const header = document.querySelector('.home--header');
 
 anchors.forEach( anchor => {
     anchor.addEventListener('click', ()=> {
@@ -12,11 +12,13 @@ anchors.forEach( anchor => {
 // navbar scroll
 
 const scrollHeader = () => {
-    if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 300) {
-        header.classList.add('pages');
-      } else {
-        header.classList.remove('pages');
-      }
+    if(header) {
+        if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 300) {
+            header.classList.add('pages');
+            } else {
+            header.classList.remove('pages');
+            }
+    }
 }
 
 window.onscroll =scrollHeader;
@@ -104,5 +106,5 @@ $('.certificate--list').owlCarousel({
 AOS.init({
     offset: 150,
     delay: 100,
-    duration: 1000
+    duration: 1500
 });
