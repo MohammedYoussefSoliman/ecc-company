@@ -26,7 +26,6 @@
     }
 
     &:lang(ar) {
-      
     }
   }
 
@@ -114,7 +113,6 @@
                   background: $yellow;
                 }
               }
-
             }
 
             &:hover {
@@ -146,7 +144,6 @@
       }
     }
   }
-
 }
 
 .mobile--aside {
@@ -358,7 +355,7 @@
       }
 
       span {
-        background: #FFFFFF;
+        background: #ffffff;
         border-radius: 0;
         height: 8px;
         width: 8px;
@@ -477,17 +474,16 @@
     }
 
     .owl-next {
-      right: 0
+      right: 0;
     }
   }
 }
 
 .services {
   .services--list {
-
     // display: flex;
     // @include gap(2rem, row);
-    >* {
+    > * {
       // flex: 1;
     }
 
@@ -509,7 +505,7 @@
       }
 
       .service--icon {
-        background: url('../images/icons/icon_shape.svg') center top no-repeat;
+        background: url("../images/icons/icon_shape.svg") center top no-repeat;
         margin-left: 2rem;
         width: 100px;
         height: 100px;
@@ -600,7 +596,7 @@
     }
 
     .owl-next {
-      right: 0
+      right: 0;
     }
   }
 }
@@ -610,7 +606,7 @@
     display: flex;
     align-items: center;
 
-    >* {
+    > * {
       flex: 1;
       &:first-child {
         margin-right: 2rem;
@@ -618,7 +614,7 @@
     }
     &:lang(ar) {
       flex-direction: row-reverse;
-      >* {
+      > * {
         &:first-child {
           margin-right: 0;
           margin-left: 2rem;
@@ -642,7 +638,7 @@
     align-items: center;
     margin: 0;
 
-    >* {
+    > * {
       flex: 1;
       @include color-overlay($primary-color, 0.5);
     }
@@ -798,7 +794,7 @@
     }
 
     .owl-next {
-      right: 0
+      right: 0;
     }
   }
 }
@@ -985,7 +981,8 @@
 .main--page {
   &__banner {
     height: 300px;
-    background: url('../images/dayne-topkin-Sk-C-om9Jz8-unsplash.jpg') center/cover no-repeat;
+    background: url("../images/dayne-topkin-Sk-C-om9Jz8-unsplash.jpg")
+      center/cover no-repeat;
     @include color-overlay($primary-color, 0.7);
     padding: 3rem 0;
     .banner--header {
@@ -1079,12 +1076,13 @@
         }
         &.selected {
           box-shadow: none !important;
-          &:before, &:after {
+          &:before,
+          &:after {
             content: none;
           }
           .check--box {
             background-color: $secondary-color;
-            background-image: url('../images/icons/check.svg');
+            background-image: url("../images/icons/check.svg");
           }
         }
         &:lang(ar) {
@@ -1159,7 +1157,6 @@
       margin-bottom: 0;
     }
   }
-
 }
 
 .page {
@@ -1185,13 +1182,10 @@
   &--content {
     flex: 4;
     margin-right: 2rem;
-
   }
   &--img {
-    flex: 3
+    flex: 3;
   }
 }
-
-
 
 @import "./utils/responsive";
